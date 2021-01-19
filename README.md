@@ -1,2 +1,1 @@
-# svetlanaraylyan.ru
-landing page for a psychologist
+## Landing Page
