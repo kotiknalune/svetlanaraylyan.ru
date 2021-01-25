@@ -1,0 +1,28 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 350px;
+  padding-left: 50px;
+  background: #cecece;
+  font-size: 100px;
+  color: $white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-text {
+  position: relative;
+  margin-right: 10px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: $white;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  cursor: not-allowed;
+}

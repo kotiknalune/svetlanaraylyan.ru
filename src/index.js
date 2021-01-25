@@ -1,5 +1,4 @@
 import example from './js/example';
-
 import './styles/index.scss';
 
 const heading = document.createElement('h1');

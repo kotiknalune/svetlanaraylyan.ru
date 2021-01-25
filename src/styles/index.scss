@@ -1,7 +1,35 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter.ttf') format('truetype');
-}
+// abstract
+@import 'abstract/theme';
+@import 'abstract/mixins';
 
-@import 'variables';
-@import 'scaffolding';
+// base
+@import 'base/reset';
+@import 'base/base';
+@import 'base/header';
+@import 'base/main';
+@import 'base/footer';
+
+// text
+@import 'text/fonts';
+@import 'text/typography';
+
+// elements
+@import 'elements/button';
+@import 'elements/certificate';
+@import 'elements/input';
+@import 'elements/menu';
+@import 'elements/modal';
+@import 'elements/social';
+@import 'elements/structural';
+@import 'elements/tooltip';
+
+// sections
+@import 'sections/slider';
+@import 'sections/about';
+@import 'sections/headlines';
+@import 'sections/qualifications';
+@import 'sections/contact';
+
+// utils
+@import 'utils/helper';
+@import 'utils/media';

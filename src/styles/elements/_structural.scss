@@ -1,0 +1,23 @@
+.divider {
+  width: 70%;
+  height: 1px;
+  background: $white;
+  margin: 2rem 0;
+
+  &.half {
+    width: 50%;
+  }
+}
+
+.overlay {
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  margin-bottom: 6rem;
+  z-index: 1;
+}
+
+.overlay__header {
+  background: $translucent;
+  height: 600px;
+}

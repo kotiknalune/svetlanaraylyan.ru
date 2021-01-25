@@ -1,0 +1,71 @@
+.social__links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+}
+
+.social__links a {
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all ease 0.3s;
+}
+
+.social__links a:hover {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.social__links a span {
+  transition: all ease 0.3s;
+}
+
+.social__links a span:hover {
+  padding: 1px solid rgba(0, 0, 0, 0);
+  padding: 2px;
+  filter: brightness(150%);
+}
+
+.footer__icon,
+.social__icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social__links {
+  margin-right: 31.5px;
+}
+
+.social__icon {
+  margin-right: 0.8rem;
+}
+
+.facebook {
+  background-image: url(../assets/social/instagram-red.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.twitter {
+  background-image: url(../assets/social/whatsapp-red.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.linkedin {
+  background-image: url(../assets/social/skype-red.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

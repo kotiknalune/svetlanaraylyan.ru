@@ -1,0 +1,52 @@
+#message-block {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-wrap: break-word;
+  overflow-y: hidden;
+}
+#message-block.hidden {
+  display: none;
+}
+
+#message {
+  position: absolute;
+  width: 510px;
+  padding: 11px;
+  background-color: rgba(50, 55, 70, 0.9);
+  top: 20%;
+  left: 23%;
+  border: 1px solid #fbc65f80;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  z-index: 3;
+}
+#message p {
+  padding: 5px;
+  line-height: 3rem;
+}
+
+#message-title {
+  text-align: center;
+}
+
+#message-content {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.text-message {
+  max-height: 250px;
+  padding-right: 10px;
+}
+
+span.messages {
+  font-size: 1.6rem;
+  color: #ffffff;
+  display: block;
+  padding: 10px;
+}

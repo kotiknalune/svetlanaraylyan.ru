@@ -1,0 +1,12 @@
+.active {
+  color: $base-theme-color;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.to-left {
+  left: -7rem;
+  transition: left 0.5s ease;
+}

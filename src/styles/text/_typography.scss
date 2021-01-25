@@ -1,0 +1,62 @@
+h1 {
+  width: 100%;
+  margin: 1rem 0 2rem 0;
+
+  font-size: 6rem;
+  font-family: $heading-font;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+
+  line-height: 3rem;
+  letter-spacing: -0.25rem;
+
+  transition: all 0.5s ease;
+}
+
+h2 {
+  font-family: $heading-font;
+  color: $base-theme-color;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $black;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 0.3;
+  text-transform: initial;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: initial;
+  line-height: 0;
+  color: $base-theme-color;
+}
+
+blockquote {
+  text-align: center;
+  line-height: 1.5;
+}
+
+p {
+  color: $font-color;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  cursor: pointer;
+}
+
+.section__header {
+  font-size: 3rem;
+  text-transform: initial;
+}
