@@ -12,7 +12,7 @@ header {
   transition: height 0.5s ease;
 
   &.shorten {
-    height: 70px;
+    height: 55px;
   }
 }
 
@@ -32,6 +32,10 @@ nav {
   & img {
     height: 30px;
     margin-right: 0.5rem;
+  }
+
+  @media(max-width:700px) {
+    margin-left: 20vw;
   }
 }
 

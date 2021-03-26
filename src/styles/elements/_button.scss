@@ -24,7 +24,7 @@ button {
   justify-content: center;
   align-items: center;
   height: 65px;
-  width: 365px;
+  width: 335px;
   transition: border 0.3s ease;
 
   &:hover {
@@ -80,7 +80,7 @@ $burger-translate: 1rem;
 $burger-degree: 45deg;
 
 .burger-opened {
-  transform: translateX(3rem);
+  transform: translateX(6rem);
 
   & span:nth-child(1) {
     transform: rotate(-$burger-degree) translateY($burger-translate);
