@@ -4,12 +4,31 @@
   text-align: center;
   padding: 0;
   width: 100%;
+
+  @media(max-width: 700px){
+    position: fixed;
+    left: 1rem;
+    top: 10vh;
+    z-index: 201;
+    transform: translateX(-20%);
+  }
+
+  &.menu-opened {
+    transform: translate(0%);
+    transition: all 0.5s ease-in;
+  }
 }
 
 .menu__item {
   display: table-cell;
   position: relative;
   padding: 1rem;
+
+  @media(max-width: 700px){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   & a {
     font-size: 1.4rem;
@@ -22,6 +41,12 @@
       &::after {
         width: 50%;
         left: 23%;
+
+        @media(max-width: 700px) {
+          width: 10%;
+          left: 1rem;
+          z-index: 201;
+        }
       }
     }
 
@@ -31,11 +56,11 @@
       content: '';
       display: block;
       height: 1px;
-      left: 50%;
+      left:0;
       position: absolute;
       background: $link-color;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
-      width: 0;
+      width:0;
     }
   }
 }

@@ -1,6 +1,9 @@
 header
   div.wrapper.row
-    button.burger(type="button")
+    a.burger(href='#')#burger
+      span.bar
+      span.bar
+      span.bar
     div.brand
       a(href="#")
         img(src="../assets/small-logo.png" alt="Светлана Райлян - системный семейный психолог")
@@ -12,8 +15,9 @@ header
         - const sections = [{text:'Обо мне', anchor:'#about'},{text:'Услуги', anchor:'#services'},{text:'Образование', anchor:'#education'},{text:'Контакты', anchor:'#contact'}];
           each section in sections
             li.menu__item: a(href=section.anchor)= section.text
+      div.lightbox
+
     div.social-links
       - const social = ['instagram', 'whatsapp', 'skype'];
         each item in social
           a(href="#"): span(class=`social__icon ${item}`)
-  div.lightbox.transparent

@@ -11,7 +11,6 @@ header {
 
   transition: height 0.5s ease;
 
-
   &.shorten {
     height: 70px;
   }
@@ -20,6 +19,10 @@ header {
 nav {
   display: flex;
   justify-content: center;
+
+  @media(max-width: 700px){
+    /*display:none;*/
+  }
 }
 
 .brand {
@@ -32,29 +35,24 @@ nav {
   }
 }
 
-.burger {
-  display: none;
-  position: absolute;
-
-  width: 25px;
-  height: 20px;
-
-  left: 20px;
-  top: 26px;
-
-  @include cover-background(url('../assets/icons/burger.svg'));
-  transition: transform 0.5s ease;
-
-  z-index: 999;
-}
-
 .lightbox {
-  position: absolute;
-  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15rem;
   height: 100%;
-  background: rgba($box-shadow, 0.65);
-  transition: opacity 0.5s ease-in;
+  background: $white;
+  box-shadow: 0px 0px 1rem #00000060;
+  transform: translateX(-120%);
+  transition: all 0.5s ease-in;
+  z-index: 200;
 
-  z-index: 998;
-  cursor: pointer;
+  &.lightbox-opened {
+    transform: translateX(0%);
+  }
+
+  @media(max-width:700px) {
+    display: block;
+  }
 }
