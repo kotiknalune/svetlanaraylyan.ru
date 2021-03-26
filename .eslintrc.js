@@ -10,12 +10,4 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  overrides: [
-    {
-      files: ['*.js'],
-      rules: {
-        'prettier/prettier': 'off',
-      },
-    },
-  ],
 };

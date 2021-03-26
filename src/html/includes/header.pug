@@ -1,0 +1,19 @@
+header
+  div.wrapper.row
+    button.burger(type="button")
+    div.brand
+      a(href="#")
+        img(src="../assets/small-logo.png" alt="Светлана Райлян - системный семейный психолог")
+      div.brand-text
+        h2 Светлана Райлян
+        h3 Системный семейный психолог
+    nav
+      ul.menu#menu
+        - const sections = [{text:'Обо мне', anchor:'#about'},{text:'Услуги', anchor:'#services'},{text:'Образование', anchor:'#education'},{text:'Контакты', anchor:'#contact'}];
+          each section in sections
+            li.menu__item: a(href=section.anchor)= section.text
+    div.social-links
+      - const social = ['instagram', 'whatsapp', 'skype'];
+        each item in social
+          a(href="#"): span(class=`social__icon ${item}`)
+  div.lightbox.transparent

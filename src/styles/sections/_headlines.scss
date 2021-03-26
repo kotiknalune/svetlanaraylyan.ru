@@ -1,4 +1,4 @@
-.portfolio {
+.abstract {
   background: $base-theme-color;
   height: 220px;
   display: flex;
@@ -6,8 +6,9 @@
   justify-content: center;
 }
 
-.abstract {
+.abstract__grid {
   width: 100%;
+  max-width: 1024px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 15rem;
@@ -33,28 +34,28 @@
 
 .abstract__1 {
   grid-area: abs1;
-  & .item__icon {
+  &.item__icon {
     background-image: url('../assets/icons/psychology.svg');
   }
 }
 
 .abstract__2 {
   grid-area: abs2;
-  & .item__icon {
+  &.item__icon {
     background-image: url('../assets/icons/speech-bubble.svg');
   }
 }
 
 .abstract__3 {
   grid-area: abs3;
-  & .item__icon {
+  &.item__icon {
     background-image: url('../assets/icons/science-book.svg');
   }
 }
 
 .abstract__4 {
   grid-area: abs4;
-  & .item__icon {
+  &.item__icon {
     background-image: url('../assets/icons/person.svg');
   }
 }
@@ -63,13 +64,16 @@
   height: 165px;
   width: 100%;
 
+  min-width: 180px;
+  max-width: 230px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 
   border: 1px solid rgba($white, 0.3);
-  transition: 0.5s ease all;
+  transition: 0.5s ease background-color;
 
   &:hover {
     background-color: rgba($highlight-theme-color, 0.2);

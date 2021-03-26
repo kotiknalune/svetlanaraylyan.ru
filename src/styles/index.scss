@@ -1,6 +1,7 @@
 // abstract
 @import 'abstract/theme';
 @import 'abstract/mixins';
+@import 'abstract/animations';
 
 // base
 @import 'base/reset';
@@ -27,6 +28,7 @@
 @import 'sections/slider';
 @import 'sections/about';
 @import 'sections/headlines';
+@import 'sections/services';
 @import 'sections/qualifications';
 @import 'sections/contact';
 

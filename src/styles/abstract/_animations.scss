@@ -1,0 +1,26 @@
+.anim {
+  & .anim-item {
+	  transform: translate(0px, 120%);
+	  opacity: 0;
+  }
+
+  &._active {
+    & .anim-item {
+      transform: translate(0px, 0px);
+      opacity: 1;
+      transition: all 0.8s ease;
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

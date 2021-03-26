@@ -3,45 +3,39 @@
   list-style: none;
   text-align: center;
   padding: 0;
-  width: 430px;
+  width: 100%;
 }
 
 .menu__item {
   display: table-cell;
   position: relative;
-  padding: 5px 0;
-}
-.menu__item .last:after {
-  content: '';
-}
-.menu__item a {
-  font-size: 1.4rem;
-  font-family: 'Montserrat';
-  font-weight: 500;
-}
-.menu__item a:hover {
-  color: #571010;
-  transition: 0.3s;
-}
+  padding: 1rem;
 
-.menu__item a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: '';
-  display: block;
-  height: 1px;
-  left: 50%;
-  position: absolute;
-  background: rgb(152, 152, 152);
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-.menu__item a:hover:after {
-  width: 50%;
-  left: 23%;
-}
+  & a {
+    font-size: 1.4rem;
+    font-weight: 500;
 
-nav.to-right {
-  left: 0;
-  background: #2d303a;
+    &:hover {
+      color: $base-theme-color;
+      transition: 0.3s;
+
+      &::after {
+        width: 50%;
+        left: 23%;
+      }
+    }
+
+    &::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      background: $link-color;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+  }
 }

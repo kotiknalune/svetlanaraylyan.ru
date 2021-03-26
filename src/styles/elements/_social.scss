@@ -1,71 +1,55 @@
-.social__links {
+.social-links {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 150px;
+  width: 13rem;
+
+  & a {
+    @include flex-center();
+    padding: 0.15rem;
+    border-radius: 50%;
+    border: 1px solid $base-theme-color;
+    transition: all ease 0.3s;
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0);
+    }
+  }
 }
 
-.social__links a {
-  padding: 5px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  transition: all ease 0.3s;
-}
-
-.social__links a:hover {
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.social__links a span {
-  transition: all ease 0.3s;
-}
-
-.social__links a span:hover {
-  padding: 1px solid rgba(0, 0, 0, 0);
-  padding: 2px;
-  filter: brightness(150%);
-}
-
-.footer__icon,
-.social__icon {
-  display: block;
-  width: 30px;
-  height: 30px;
-}
-
-.social {
-  display: flex;
-  flex-direction: column;
-}
-
-.social__links {
-  margin-right: 31.5px;
-}
+$icon-size: 2.5rem;
 
 .social__icon {
-  margin-right: 0.8rem;
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+    filter: brightness(150%);
+  }
 }
 
-.facebook {
+.instagram {
   background-image: url(../assets/social/instagram-red.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.twitter {
+.whatsapp {
   background-image: url(../assets/social/whatsapp-red.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.linkedin {
+.skype {
   background-image: url(../assets/social/skype-red.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.time {
+  background-image: url(../assets/icons/time.svg);
+}
+
+.price {
+  background-image: url(../assets/icons/price.svg);
 }

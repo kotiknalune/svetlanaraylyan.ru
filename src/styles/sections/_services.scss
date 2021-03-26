@@ -1,0 +1,110 @@
+$service-width: 400px;
+$services-bg: url(https://images.unsplash.com/photo-1484553255294-313b931acd27?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3152&q=80);
+$services-height: 800px;
+$block-spacing: 2rem;
+
+.services {
+  background: $white;
+  height: $services-height;
+  @include flex-center();
+  @include cover-background($services-bg, fixed);
+}
+
+.overlay__services {
+  background: $translucent;
+  height: $services-height;
+}
+
+.service {
+  @include flex-center(row);
+  flex-wrap: wrap;
+  height: 500px;
+}
+
+.service__individual,
+.service__couple {
+  height: 100%;
+  @include flex-center(row);
+  margin: $block-spacing;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.service__image {
+  width: $service-width / 2;
+  height: 100%;
+}
+
+.service__individual {
+  & .service__image {
+    @include cover-background(url('../assets/images/seagull.jpg'));
+  }
+}
+
+.service__couple {
+  & .service__image {
+    @include cover-background(url('../assets/images/lighthouse.jpg'));
+  }
+}
+
+.service__textarea {
+  height: 100%;
+  width: $service-width;
+  @include flex-center(column, space-around);
+  align-items: flex-start;
+  padding: $block-spacing;
+  background: $white;
+
+  & h2 {
+    text-transform: initial;
+    font-size: 3rem;
+  }
+
+  & h4 {
+    line-height: 1;
+    padding-bottom: $block-spacing;
+    font-size: 1.6rem;
+  }
+
+  & p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  & button {
+    background-color: $base-theme-color;
+    color: $white;
+    padding: 1rem 2rem;
+  }
+
+  & .divider {
+    background: $base-theme-color;
+  }
+}
+
+.services__panel {
+  width: 100%;
+  @include flex-center(row, flex-start);
+  padding: $block-spacing 0;
+}
+
+.panel__item {
+  display: flex;
+  margin-right: $block-spacing;
+}
+
+.label {
+  padding-left: 0.5rem;
+
+  & h4 {
+    padding: 0;
+    font-size: 1.4rem;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

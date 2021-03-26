@@ -1,74 +1,51 @@
+button {
+  cursor: pointer;
+  background: $white;
+  border: 1px solid $base-theme-color;
+  padding: 1rem;
+  color: $base-theme-color;
+  font-size: 1.3rem;
+  transition: all ease 0.3s;
+  transform: scale(1);
+  outline: 0;
+  overflow: hidden;
+
+  &:hover {
+    color: $white;
+    background: $base-theme-color;
+    transform: scale(1.05);
+  }
+}
+
 .slider__button {
   border: 1px solid transparent;
-  border-radius: 35px;
+  border-radius: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 65px;
   width: 365px;
   transition: border 0.3s ease;
-}
 
-.slider__button:hover {
-  border: 1px solid white;
-}
+  &:hover {
+    border: 1px solid $white;
+  }
 
-.slider__button button {
-  font: inherit;
-  cursor: pointer;
-  display: block;
-  border: none;
-  padding: 15px 40px;
-  margin: 20px 0px;
-  border-radius: 50px;
-  background-color: #571010;
-  color: white;
-  font-weight: 100;
-  font-family: 'Montserrat', Verdana, sans-serif;
-  transition: all 0.3s ease;
-}
-
-.slider__button button:hover {
-  background: #a76458;
-}
-
-button:hover {
-  color: white;
-  background: #571010;
-  transform: scale(1.05);
-}
-
-button {
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #571010;
-  padding: 10px;
-  color: #571010;
-  font-size: 1.2rem;
-  font-family: 'Montserrat', Verdana, sans-serif;
-  transition: all ease 0.3s;
-  transform: scale(1);
-  outline: 0;
-  overflow: hidden;
-}
-
-.message-button,
-.button {
-  padding: 10px 47px;
-  border: none;
-  background: #fbc65f;
-  color: #9c7a39;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-.message-button:hover,
-.button:hover {
-  color: #fbc65f;
-  background-color: #9c7a39;
-  transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+  & button {
+    display: block;
+    border: none;
+    padding: 1.5rem 4rem;
+    margin: 2rem 0px;
+    border-radius: 5rem;
+    background-color: $base-theme-color;
+    color: white;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    font-size: 1.6rem;
+    font-family: 'Raleway';
+    letter-spacing: 0.06rem;
+    &:hover {
+      background: #a76458;
+    }
+  }
 }

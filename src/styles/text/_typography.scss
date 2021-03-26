@@ -1,17 +1,17 @@
 h1 {
   width: 100%;
-  margin: 1rem 0 2rem 0;
+  position: relative;
 
-  font-size: 6rem;
+  font-size: 6vw;
   font-family: $heading-font;
-  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
 
-  line-height: 3rem;
   letter-spacing: -0.25rem;
 
-  transition: all 0.5s ease;
+  @media (min-width:1400px) {
+    font-size: 8rem;
+  } 
 }
 
 h2 {
@@ -26,27 +26,41 @@ h3 {
   color: $black;
   font-weight: normal;
   font-size: 1.2rem;
-  line-height: 0.3;
-  text-transform: initial;
+  line-height: 1.5;
+}
+
+.brand-text {
+  & h2 {
+    font-size: 2vw;
+    @media (min-width:960px) {
+      font-size: 2rem;
+    } 
+  }
+
+  & h3 {
+    font-size: 1.2vw;
+    @media (min-width:960px) {
+      font-size: 1.2rem;
+    } 
+  }
 }
 
 h4 {
   font-size: 1.8rem;
-  font-weight: 500;
   text-transform: initial;
-  line-height: 0;
+  line-height: 2;
   color: $base-theme-color;
 }
 
 blockquote {
   text-align: center;
   line-height: 1.5;
+  padding: 0 2rem 2rem;
 }
 
 p {
   color: $font-color;
   font-size: 1.5rem;
-  font-weight: 300;
   margin: 0;
 }
 
@@ -58,5 +72,35 @@ a {
 
 .section__header {
   font-size: 3rem;
+  line-height: 2;
   text-transform: initial;
+}
+
+h1::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: rgba(180, 180, 180, 0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+
+.bold {
+  font-weight: 700;
 }

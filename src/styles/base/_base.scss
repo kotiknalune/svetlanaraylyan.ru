@@ -1,3 +1,7 @@
+* {
+  -webkit-locale: auto;
+  white-space: normal;
+}
 html {
   background: $background-color;
   font-size: 62.5%;
@@ -6,15 +10,69 @@ html {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   font-size: 1.6rem;
+  font-weight: 500;
   overflow-x: hidden;
   @include flex-center();
 }
 
-#root {
+.wrapper {
   @include flex-center();
-  width: 1020px;
-  height: 100vh;
-  z-index: 0;
+  width: 100%;
+  z-index: 2;
 }
+
+$loader-size: 75px;
+
+.loader {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: $loader-size;
+  height: $loader-size;
+  margin: -$loader-size/2;
+  border-radius: 50%;
+  background-image:url('../assets/small-logo.png');
+  background-size: cover;
+  z-index: 1001;
+  animation: loader 2s infinite;
+
+  &.loaded {
+    opacity:0;
+    transform: scale(0.5);
+    transition: all 1s ease;
+  }
+}
+
+.loader-wrapper {
+  & .loader-section {
+    position:fixed;
+    top:0%;
+    width:50%;
+    height:100%;
+    background: white;
+    z-index: 1000;
+
+    &.section-left{
+      left:0;
+      &.loaded {
+        transform: translateX(-100%);
+        transition: transform 1s ease-in;
+      }
+    }
+
+    &.section-right {
+      right:0;
+      &.loaded {
+        transform: translateX(100%);
+        transition: transform 1s ease-in;
+      }
+    }
+  }
+  &.loaded {
+    visibility: hidden;
+  }
+}
+

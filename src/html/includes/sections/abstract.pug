@@ -1,0 +1,8 @@
+section.abstract
+  div.wrapper
+    div.abstract__grid
+      - const phrases = ['Все наши встречи строго конфиденциальны', 'Провожу сессии как online так и лично в кабинете', 'Я постоянно изучаю новые направления и системы', 'Составляю терапию в соответствии с вашими потребностями'];
+        each item, index in phrases
+          div.abstract__item.anim.anim-once
+            span(class=`item__icon abstract__${index + 1}`)
+            p #{item}

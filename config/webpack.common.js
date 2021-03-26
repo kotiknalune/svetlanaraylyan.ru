@@ -1,7 +1,6 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PrettierPlugin = require('prettier-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const paths = require('./paths');
 
@@ -33,9 +32,9 @@ module.exports = {
 
     // Generates an HTML file from a template
     new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
+      title: 'Landing page',
       favicon: `${paths.src}/assets/favicon.ico`,
-      template: `${paths.src}/template.html`, // template file
+      template: `${paths.src}/index.html`, // template file
       filename: 'index.html', // output file
     }),
 
@@ -43,16 +42,15 @@ module.exports = {
       files: ['.', 'src', 'config'],
       formatter: 'table',
     }),
-    new PrettierPlugin(),
   ],
   module: {
     rules: [
-      // JavaScript: Use Babel to transpile JavaScript files
+      // { test: /\.pug$/, use: ['pug-html-loader'] },
       { test: /\.js$/, use: ['babel-loader'] },
       // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      { test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i, type: 'asset/resource' },
       // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
+      { test: /\.(woff(2)?|eot|ttf|otf|)$/, type: 'asset/inline' },
     ],
   },
 };
