@@ -53,7 +53,7 @@ button {
 .burger {
   position: relative;
   top: 0;
-  right: 1rem;
+  right: 0rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -80,8 +80,6 @@ $burger-translate: 1rem;
 $burger-degree: 45deg;
 
 .burger-opened {
-  transform: translateX(6rem);
-
   & span:nth-child(1) {
     transform: rotate(-$burger-degree) translateY($burger-translate);
   }
